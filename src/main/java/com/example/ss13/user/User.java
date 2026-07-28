@@ -21,6 +21,9 @@ public class User {
 	private String username;
 
 	@Column(nullable = false)
+	private String fullName;
+
+	@Column(nullable = false)
 	private String password;
 
 	@Enumerated(EnumType.STRING)
@@ -44,6 +47,14 @@ public class User {
 
 	public void setUsername(String username) {
 		this.username = username;
+	}
+
+	public String getFullName() {
+		return fullName;
+	}
+
+	public void setFullName(String fullName) {
+		this.fullName = fullName;
 	}
 
 	public String getPassword() {
